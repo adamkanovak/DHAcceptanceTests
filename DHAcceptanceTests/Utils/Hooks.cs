@@ -9,7 +9,7 @@ namespace DHAcceptanceTests.Utils
         [BeforeTestRun]
         public static void SetUp()
         {
-            BrowserFactory.GetDriver("Chrome");         
+            BrowserFactory.GetDriver();         
         }
 
         [AfterTestRun]

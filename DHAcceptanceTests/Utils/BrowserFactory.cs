@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
- 
+using System.Configuration;
+
 namespace DHAcceptanceTests.Utils
 {
     class BrowserFactory
@@ -13,16 +14,16 @@ namespace DHAcceptanceTests.Utils
         /// </summary>
         /// <param name="browserName"></param>
         /// <returns></returns>
-        public static IWebDriver GetDriver(string browserName="Chrome")
+        public static IWebDriver GetDriver()
         {
-            switch (browserName)
+            switch (ConfigurationManager.AppSettings["Browser"])
             {
                 case "Chrome":
                     if (Driver == null)
                     {
                         Driver = new ChromeDriver();
                         Driver.Manage().Window.Maximize();
-                        Driver.Url = "http://uitest.duodecadits.com/";                        
+                        Driver.Url = ConfigurationManager.AppSettings["BaseUrl"];
                     }
                     break;
             }         
