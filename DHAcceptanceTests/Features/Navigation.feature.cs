@@ -18,20 +18,20 @@ namespace DHAcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("REQ-UI- 07 Error page tests")]
-    public partial class REQ_UI_07ErrorPageTestsFeature
+    [NUnit.Framework.DescriptionAttribute("Navigation features")]
+    public partial class NavigationFeaturesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ErrorPage.feature"
+#line 1 "Navigation.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "REQ-UI- 07 Error page tests", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Navigation features", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,20 +64,20 @@ namespace DHAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The error button should navigate to Error page 404")]
+        [NUnit.Framework.DescriptionAttribute("Home button navigation REQ-UI-03")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void TheErrorButtonShouldNavigateToErrorPage404()
+        public virtual void HomeButtonNavigationREQ_UI_03()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The error button should navigate to Error page 404", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home button navigation REQ-UI-03", new string[] {
                         "P1"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
  testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("the user clicks the Error button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the user clicks the home button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
- testRunner.Then("the user should be navigated to Error page 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the user should be navigated to the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

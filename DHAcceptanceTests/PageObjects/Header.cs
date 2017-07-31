@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
 
 namespace DHAcceptanceTests.PageObjects
 {
@@ -33,7 +32,7 @@ namespace DHAcceptanceTests.PageObjects
             return this;
         }
 
-        public bool IsDisplayed(String WebElementName)
+        public bool IsDisplayed(string WebElementName)
         {
             switch(WebElementName)
             {
@@ -45,8 +44,6 @@ namespace DHAcceptanceTests.PageObjects
                     return ErrorButton.Displayed;
              }
             return false;
-        }
-
-       
+        }    
     }
 }
