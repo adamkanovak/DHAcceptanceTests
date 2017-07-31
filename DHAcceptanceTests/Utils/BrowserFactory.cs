@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 using System.Configuration;
 
 namespace DHAcceptanceTests.Utils
@@ -22,13 +23,16 @@ namespace DHAcceptanceTests.Utils
                     if (Driver == null)
                     {
                         Driver = new ChromeDriver();
-                        Driver.Manage().Window.Maximize();
                         Driver.Url = ConfigurationManager.AppSettings["BaseUrl"];
+                        Driver.Manage().Window.Maximize();
                     }
                     break;
-            }         
+                default:
+                    throw new NullReferenceException("Uknown browsertype added in App.config, please add a valid browser: Chrome");
+            }
             return Driver;
         }
+
         /// <summary>
         /// Destroys the existing webDriver instance. 
         /// </summary>

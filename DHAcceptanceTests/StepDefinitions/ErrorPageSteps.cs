@@ -6,13 +6,7 @@ namespace DHAcceptanceTests.StepDefinitions
 {
     [Binding]
     class ErrorPageSteps
-    {
-        [Given(@"the user is navigated to the site")]
-        public void GivenTheUserIsNavigatedToTheSite()
-        {
-            Assert.True(Page.Header.IsDisplayed("HomeButton"), "The application is not loaded");
-        }
-        
+    {        
         [When(@"the user clicks the Error button in the header")]
         public void WhenTheUserClicksTheErrorButtonInTheHeader()
         {

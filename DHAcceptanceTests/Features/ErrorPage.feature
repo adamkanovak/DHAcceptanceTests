@@ -1,6 +1,6 @@
-﻿@P1
-Feature: REQ-UI- 07 Error page tests
+﻿Feature: REQ-UI- 07 Error page tests
 
+@P1
 Scenario: The error button should navigate to Error page 404
 	Given the user is navigated to the site
 	When the user clicks the Error button in the header

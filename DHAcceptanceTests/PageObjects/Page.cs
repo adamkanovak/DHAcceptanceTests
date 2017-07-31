@@ -27,5 +27,10 @@ namespace DHAcceptanceTests.PageObjects
         {
             return BrowserFactory.GetDriver().Title;
         }
+
+        public static String GetUrl()
+        {
+            return BrowserFactory.GetDriver().Url;
+        }
     }
 }
