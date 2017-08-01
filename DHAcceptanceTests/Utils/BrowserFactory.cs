@@ -5,9 +5,9 @@ using System.Configuration;
 
 namespace DHAcceptanceTests.Utils
 {
-    class BrowserFactory
+    class BrowserFactory : IDisposable
     {
-        private static IWebDriver Driver;
+        private IWebDriver driver;
 
         /// <summary>
         /// Returns a new webDriver instance, or returns the existing one.
@@ -15,31 +15,39 @@ namespace DHAcceptanceTests.Utils
         /// </summary>
         /// <param name="browserName"></param>
         /// <returns></returns>
-        public static IWebDriver GetDriver()
+        public IWebDriver Driver
         {
-            switch (ConfigurationManager.AppSettings["Browser"])
+            get
             {
-                case "Chrome":
-                    if (Driver == null)
-                    {
-                        Driver = new ChromeDriver();
-                        Driver.Url = ConfigurationManager.AppSettings["BaseUrl"];
-                        Driver.Manage().Window.Maximize();
-                    }
+                if (driver == null)
+                    CreateWebDriver();
+                return driver;
+            }
+        }
+        private void CreateWebDriver()
+        {
+            switch (ConfigurationManager.AppSettings["Browser"].ToLower())
+            {
+                case "chrome":
+                    driver = new ChromeDriver();
                     break;
                 default:
                     throw new NullReferenceException("Uknown browsertype added in App.config, please add a valid browser: Chrome");
             }
-            return Driver;
+            driver.Manage().Window.Maximize();
+            driver.Url = ConfigurationManager.AppSettings["BaseUrl"];
         }
 
         /// <summary>
         /// Destroys the existing webDriver instance. 
         /// </summary>
-        public static void DestroyDriver()
+        public void Dispose()
         {
-            Driver.Close();
-            Driver.Quit();
+            if (driver != null)
+            {
+                driver.Quit();
+                driver = null;
+            }
         }
     }
 }
