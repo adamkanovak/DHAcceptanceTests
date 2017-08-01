@@ -96,7 +96,6 @@
     </Compile>
     <Compile Include="PageObjects\Header.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
-    <Compile Include="StepDefinitions\ErrorPageSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\NavigationSteps.cs" />
     <Compile Include="Utils\BrowserFactory.cs" />

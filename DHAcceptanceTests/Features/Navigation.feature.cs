@@ -64,19 +64,40 @@ namespace DHAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Home button navigation REQ-UI-03")]
+        [NUnit.Framework.DescriptionAttribute("Home button navigation REQ-UI-03 from the home page")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void HomeButtonNavigationREQ_UI_03()
+        public virtual void HomeButtonNavigationREQ_UI_03FromTheHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home button navigation REQ-UI-03", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home button navigation REQ-UI-03 from the home page", new string[] {
                         "P1"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
  testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("the user clicks the home button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the user clicks the Home button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
+ testRunner.Then("the user should be navigated to the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Home button navigation REQ-UI-03 from the form page")]
+        [NUnit.Framework.CategoryAttribute("P1")]
+        public virtual void HomeButtonNavigationREQ_UI_03FromTheFormPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home button navigation REQ-UI-03 from the form page", new string[] {
+                        "P1"});
+#line 10
+this.ScenarioSetup(scenarioInfo);
+#line 11
+ testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.When("the user clicks the Form button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+  testRunner.And("the user clicks the Home button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
  testRunner.Then("the user should be navigated to the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
