@@ -64,11 +64,11 @@ namespace DHAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The error button should navigate to Error page 404")]
+        [NUnit.Framework.DescriptionAttribute("When I click on the Error button, I should get a 404 HTTP response code")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void TheErrorButtonShouldNavigateToErrorPage404()
+        public virtual void WhenIClickOnTheErrorButtonIShouldGetA404HTTPResponseCode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The error button should navigate to Error page 404", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When I click on the Error button, I should get a 404 HTTP response code", new string[] {
                         "P1"});
 #line 4
 this.ScenarioSetup(scenarioInfo);

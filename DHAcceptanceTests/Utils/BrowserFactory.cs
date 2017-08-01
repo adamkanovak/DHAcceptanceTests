@@ -29,13 +29,12 @@ namespace DHAcceptanceTests.Utils
             switch (ConfigurationManager.AppSettings["Browser"].ToLower())
             {
                 case "chrome":
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver();                    
                     break;
                 default:
                     throw new NullReferenceException("Uknown browsertype added in App.config, please add a valid browser: Chrome");
             }
-            driver.Manage().Window.Maximize();
-            driver.Url = ConfigurationManager.AppSettings["BaseUrl"];
+            driver.Manage().Window.Maximize();           
         }
 
         /// <summary>
