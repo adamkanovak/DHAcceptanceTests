@@ -34,6 +34,9 @@ namespace DHAcceptanceTests.StepDefinitions
         {
             switch (buttonName.ToLower())
             {
+                case "uitestingbutton":
+                    header.ClickUItestingButton();
+                    break;
                 case "home":
                     header.ClickHomeButton();
                     break;

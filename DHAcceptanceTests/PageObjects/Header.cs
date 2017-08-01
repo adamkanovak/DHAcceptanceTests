@@ -11,6 +11,9 @@ namespace DHAcceptanceTests.PageObjects
         private readonly IWebDriver _driver;
         private WebDriverWait wait;
 
+        [FindsBy(How = How.Id, Using = "site")]
+        private IWebElement UITestingButton { get; set; }
+
         [FindsBy(How = How.Id, Using = "home")]
         private IWebElement HomeButton { get; set; }
 
@@ -26,6 +29,13 @@ namespace DHAcceptanceTests.PageObjects
             PageFactory.InitElements(_driver, this);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(1));
            
+        }
+
+        public Header ClickUItestingButton()
+        {
+            wait.Until(driver => UITestingButton.Displayed);
+            UITestingButton.Click();
+            return this;
         }
 
         public Header ClickHomeButton()
@@ -53,7 +63,9 @@ namespace DHAcceptanceTests.PageObjects
         {
             wait.Until(driver => HomeButton.Displayed);
             switch (WebElementName)
-            {            
+            {
+                case "UITestingButton":
+                    return UITestingButton.Displayed;
                 case "HomeButton":
                     return HomeButton.Displayed;
                 case "FormButton":

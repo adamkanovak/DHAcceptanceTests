@@ -18,3 +18,16 @@ Scenario: REQ-UI- 05 Form button navigation
 	Given the user is navigated to the site
 	When the user clicks the Form button in the header
 	Then the user should be navigated to the Form page
+
+@P1
+Scenario: REQ-UI-08 UI testing button navigation
+	Given the user is navigated to the site
+	When the user clicks the UITestingButton button in the header
+	Then the user should be navigated to the Home page
+
+@P1
+Scenario:REQ-UI-08 UI testing button navigation from the form page
+	Given the user is navigated to the site
+	When the user clicks the Form button in the header
+		And the user clicks the UITestingButton button in the header
+	Then the user should be navigated to the Home page

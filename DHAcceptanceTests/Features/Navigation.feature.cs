@@ -121,6 +121,46 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-08 UI testing button navigation")]
+        [NUnit.Framework.CategoryAttribute("P1")]
+        public virtual void REQ_UI_08UITestingButtonNavigation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-08 UI testing button navigation", new string[] {
+                        "P1"});
+#line 23
+this.ScenarioSetup(scenarioInfo);
+#line 24
+ testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.When("the user clicks the UITestingButton button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.Then("the user should be navigated to the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-08 UI testing button navigation from the form page")]
+        [NUnit.Framework.CategoryAttribute("P1")]
+        public virtual void REQ_UI_08UITestingButtonNavigationFromTheFormPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-08 UI testing button navigation from the form page", new string[] {
+                        "P1"});
+#line 29
+this.ScenarioSetup(scenarioInfo);
+#line 30
+ testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("the user clicks the Form button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+  testRunner.And("the user clicks the UITestingButton button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+ testRunner.Then("the user should be navigated to the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
