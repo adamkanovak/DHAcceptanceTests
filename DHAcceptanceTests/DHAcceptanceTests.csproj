@@ -99,6 +99,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Navigation.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\PageTitle.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageTitle.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PageObjects\Footer.cs" />
     <Compile Include="PageObjects\FormPage.cs" />
     <Compile Include="PageObjects\Header.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
@@ -125,6 +131,10 @@
     <None Include="Features\Navigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Navigation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\PageTitle.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PageTitle.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
