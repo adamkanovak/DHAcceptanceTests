@@ -1,21 +1,32 @@
-﻿using TechTalk.SpecFlow;
+﻿using BoDi;
+using OpenQA.Selenium;
+using TechTalk.SpecFlow;
 
 namespace DHAcceptanceTests.Utils
 {
     [Binding]
     class Hooks
     {
+        private readonly IObjectContainer _objectContainer;
+        private IWebDriver _driver;
 
-        [BeforeTestRun]
-        public static void SetUp()
+        public Hooks(IObjectContainer objectContainer)
         {
-            BrowserFactory.GetDriver();         
+            _objectContainer = objectContainer;
         }
 
-        [AfterTestRun]
-        public static void TearDown()
+        [BeforeScenario]
+        public void SetUp()
         {
-            BrowserFactory.DestroyDriver();
+            BrowserFactory browserFactory = new BrowserFactory();
+            _driver = browserFactory.Driver;
+            _objectContainer.RegisterInstanceAs<IWebDriver>(_driver);
+        }
+
+        [AfterScenario]
+        public void TearDown()
+        {
+            _driver.Dispose();
         }
     }
 }

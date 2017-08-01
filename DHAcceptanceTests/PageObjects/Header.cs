@@ -1,10 +1,13 @@
-﻿using OpenQA.Selenium;
+﻿using DHAcceptanceTests.Utils;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace DHAcceptanceTests.PageObjects
 {
     public class Header
     {
+        private readonly IWebDriver _driver;
+
         [FindsBy(How = How.Id, Using = "home")]
         private IWebElement HomeButton { get; set; }
 
@@ -13,6 +16,12 @@ namespace DHAcceptanceTests.PageObjects
 
         [FindsBy(How = How.Id, Using = "error")]
         private IWebElement ErrorButton { get; set; }
+
+        public Header(IWebDriver driver)
+        {
+            _driver = driver;
+            PageFactory.InitElements(_driver, this);
+        }
 
         public Header ClickHomeButton()
         {
@@ -34,7 +43,7 @@ namespace DHAcceptanceTests.PageObjects
 
         public bool IsDisplayed(string WebElementName)
         {
-            switch(WebElementName)
+            switch (WebElementName)
             {
                 case "HomeButton":
                     return HomeButton.Displayed;
@@ -42,8 +51,8 @@ namespace DHAcceptanceTests.PageObjects
                     return FormButton.Displayed;
                 case "ErrorButton":
                     return ErrorButton.Displayed;
-             }
+            }
             return false;
-        }    
+        }
     }
 }
