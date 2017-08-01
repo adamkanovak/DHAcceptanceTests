@@ -1,4 +1,4 @@
-﻿using DHAcceptanceTests.Utils;
+﻿using DHAcceptanceTests.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
@@ -28,50 +28,50 @@ namespace DHAcceptanceTests.PageObjects
             _driver = driver;
             PageFactory.InitElements(_driver, this);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(1));
-           
+
         }
 
         public Header ClickUItestingButton()
         {
-            wait.Until(driver => UITestingButton.Displayed);
+            wait.Until(driver => UITestingButton.IsDisplayed());
             UITestingButton.Click();
             return this;
         }
 
         public Header ClickHomeButton()
         {
-            wait.Until(driver => HomeButton.Displayed);
+            wait.Until(driver => HomeButton.IsDisplayed());
             HomeButton.Click();
             return this;
         }
 
         public Header ClickFormButton()
         {
-            wait.Until(driver => FormButton.Displayed);
+            wait.Until(driver => FormButton.IsDisplayed());
             FormButton.Click();
             return this;
         }
 
         public Header ClickErrorButton()
         {
-            wait.Until(driver => ErrorButton.Displayed);
+            wait.Until(driver => ErrorButton.IsDisplayed());
             ErrorButton.Click();
             return this;
         }
 
         public bool IsDisplayed(string WebElementName)
         {
-            wait.Until(driver => HomeButton.Displayed);
+            wait.Until(driver => HomeButton.IsDisplayed());
             switch (WebElementName)
             {
                 case "UITestingButton":
-                    return UITestingButton.Displayed;
+                    return UITestingButton.IsDisplayed();
                 case "HomeButton":
-                    return HomeButton.Displayed;
+                    return HomeButton.IsDisplayed();
                 case "FormButton":
-                    return FormButton.Displayed;
+                    return FormButton.IsDisplayed();
                 case "ErrorButton":
-                    return ErrorButton.Displayed;
+                    return ErrorButton.IsDisplayed();
             }
             return false;
         }

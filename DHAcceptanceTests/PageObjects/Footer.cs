@@ -1,11 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using DHAcceptanceTests.Extensions;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHAcceptanceTests.PageObjects
 {
@@ -31,11 +28,10 @@ namespace DHAcceptanceTests.PageObjects
                 case "CompanyLogo":
                     try
                     {
-                        return CompanyLogo.Displayed;
+                        return CompanyLogo.IsDisplayed();
                     }
                     catch (Exception)
                     {
-
                         return false;
                     }
             }
