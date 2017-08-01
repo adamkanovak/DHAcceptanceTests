@@ -64,11 +64,13 @@ namespace DHAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("REQ-UI-03 Home button navigation  from the home page")]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-03 When I click on the Home button, I should get navigated to the Home pag" +
+            "e (from the home page)")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void REQ_UI_03HomeButtonNavigationFromTheHomePage()
+        public virtual void REQ_UI_03WhenIClickOnTheHomeButtonIShouldGetNavigatedToTheHomePageFromTheHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-03 Home button navigation  from the home page", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-03 When I click on the Home button, I should get navigated to the Home pag" +
+                    "e (from the home page)", new string[] {
                         "P1"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
@@ -83,11 +85,13 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("REQ-UI-03 Home button navigation  from the form page")]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-03 When I click on the Home button, I should get navigated to the Home pag" +
+            "e (from the form page)")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void REQ_UI_03HomeButtonNavigationFromTheFormPage()
+        public virtual void REQ_UI_03WhenIClickOnTheHomeButtonIShouldGetNavigatedToTheHomePageFromTheFormPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-03 Home button navigation  from the form page", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-03 When I click on the Home button, I should get navigated to the Home pag" +
+                    "e (from the form page)", new string[] {
                         "P1"});
 #line 10
 this.ScenarioSetup(scenarioInfo);
@@ -104,11 +108,13 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("REQ-UI- 05 Form button navigation")]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-05 When I click on the Form button, I should get navigated to the Form pag" +
+            "e (from the home page)")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void REQ_UI_05FormButtonNavigation()
+        public virtual void REQ_UI_05WhenIClickOnTheFormButtonIShouldGetNavigatedToTheFormPageFromTheHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI- 05 Form button navigation", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-05 When I click on the Form button, I should get navigated to the Form pag" +
+                    "e (from the home page)", new string[] {
                         "P1"});
 #line 17
 this.ScenarioSetup(scenarioInfo);
@@ -123,11 +129,13 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("REQ-UI-08 UI testing button navigation")]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-08 When I click on the UI Testing button, I should get navigated to the Ho" +
+            "me page (from the home page)")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void REQ_UI_08UITestingButtonNavigation()
+        public virtual void REQ_UI_08WhenIClickOnTheUITestingButtonIShouldGetNavigatedToTheHomePageFromTheHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-08 UI testing button navigation", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-08 When I click on the UI Testing button, I should get navigated to the Ho" +
+                    "me page (from the home page)", new string[] {
                         "P1"});
 #line 23
 this.ScenarioSetup(scenarioInfo);
@@ -142,11 +150,13 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("REQ-UI-08 UI testing button navigation from the form page")]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-08 When I click on the UI Testing button, I should get navigated to the Ho" +
+            "me page (from the form page)")]
         [NUnit.Framework.CategoryAttribute("P1")]
-        public virtual void REQ_UI_08UITestingButtonNavigationFromTheFormPage()
+        public virtual void REQ_UI_08WhenIClickOnTheUITestingButtonIShouldGetNavigatedToTheHomePageFromTheFormPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-08 UI testing button navigation from the form page", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-08 When I click on the UI Testing button, I should get navigated to the Ho" +
+                    "me page (from the form page)", new string[] {
                         "P1"});
 #line 29
 this.ScenarioSetup(scenarioInfo);

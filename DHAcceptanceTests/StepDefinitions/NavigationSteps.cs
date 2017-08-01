@@ -2,6 +2,7 @@
 using DHAcceptanceTests.Utils;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using System.Configuration;
 using TechTalk.SpecFlow;
 
 namespace DHAcceptanceTests.StepDefinitions
@@ -26,6 +27,7 @@ namespace DHAcceptanceTests.StepDefinitions
         [Given(@"the user is navigated to the site")]
         public void GivenTheUserIsNavigatedToTheSite()
         {
+            _driver.Url = ConfigurationManager.AppSettings["BaseUrl"];
             Assert.True(header.IsDisplayed("HomeButton"), "The application is not loaded");
         }
 
