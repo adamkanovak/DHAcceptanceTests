@@ -1,11 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using DHAcceptanceTests.Extensions;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHAcceptanceTests.PageObjects
 {
@@ -26,17 +23,17 @@ namespace DHAcceptanceTests.PageObjects
 
         public string GetHelloText()
         {
-            wait.Until(driver => HelloText.Displayed);
+            wait.Until(driver => HelloText.IsDisplayed());
             return HelloText.Text;
         }
 
         public bool IsDisplayed(string WebElementName)
         {
-            wait.Until(driver => HelloText.Displayed);
+            wait.Until(driver => HelloText.IsDisplayed());
             switch (WebElementName)
             {
                 case "HelloText":
-                    return HelloText.Displayed;
+                    return HelloText.IsDisplayed();
             }
             return false;
         }

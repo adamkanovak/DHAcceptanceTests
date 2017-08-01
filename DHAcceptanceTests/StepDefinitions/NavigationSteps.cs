@@ -1,5 +1,4 @@
 ﻿using DHAcceptanceTests.PageObjects;
-using DHAcceptanceTests.Utils;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System.Configuration;

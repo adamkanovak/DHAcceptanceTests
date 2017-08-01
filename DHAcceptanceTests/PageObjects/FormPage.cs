@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using DHAcceptanceTests.Extensions;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -25,31 +26,31 @@ namespace DHAcceptanceTests.PageObjects
             _driver = driver;
             PageFactory.InitElements(_driver, this);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
-
         }
+
         public FormPage EnterTextToFormInputField(string text)
         {
-            wait.Until(driver => FormInputField.Displayed);
+            wait.Until(driver => FormInputField.IsDisplayed());
             FormInputField.SendKeys(text);
             return this;
         }
 
         public FormPage ClickGoButton()
         {
-            wait.Until(driver => FormSubmitButton.Displayed);
+            wait.Until(driver => FormSubmitButton.IsDisplayed());
             FormSubmitButton.Click();
             return this;
         }
 
         public bool IsDisplayed(string WebElementName)
         {
-            wait.Until(driver => FormInputField.Displayed);
+            wait.Until(driver => FormInputField.IsDisplayed());
             switch (WebElementName)
             {
                 case "FormInputField":
-                    return FormInputField.Displayed;
+                    return FormInputField.IsDisplayed();
                 case "FormSubmitButton":
-                    return FormSubmitButton.Displayed;
+                    return FormSubmitButton.IsDisplayed();
             }
             return false;
         }

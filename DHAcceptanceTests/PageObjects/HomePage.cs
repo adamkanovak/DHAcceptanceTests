@@ -1,4 +1,4 @@
-﻿using DHAcceptanceTests.Utils;
+﻿using DHAcceptanceTests.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
@@ -22,7 +22,7 @@ namespace DHAcceptanceTests.PageObjects
             switch (WebElementName)
             {
                 case "WelcomeText":
-                    return WelcomeText.Displayed;
+                    return WelcomeText.IsDisplayed();
             }
             return false;
         }
