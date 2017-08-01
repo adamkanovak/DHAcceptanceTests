@@ -24,7 +24,7 @@ namespace DHAcceptanceTests.PageObjects
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(1));
            
         }
 

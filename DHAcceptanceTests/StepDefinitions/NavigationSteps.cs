@@ -12,13 +12,15 @@ namespace DHAcceptanceTests.StepDefinitions
         private IWebDriver _driver;
         private Header header;
         private HomePage homePage;
+        private FormPage formPage;
 
 
-        public NavigationSteps(IWebDriver driver, Header header, HomePage homePage)
+        public NavigationSteps(IWebDriver driver, Header header, HomePage homePage, FormPage formPage)
         {
             _driver = driver;
             this.header = header;
             this.homePage = homePage;
+            this.formPage = formPage;
         }
 
         [Given(@"the user is navigated to the site")]
@@ -48,6 +50,12 @@ namespace DHAcceptanceTests.StepDefinitions
         public void ThenTheUserShouldBeNavigatedToTheHomePage()
         {
             Assert.True(homePage.IsDisplayed("WelcomeText"), "The user is not on the Home Page");
+        }
+
+        [Then(@"the user should be navigated to the Form page")]
+        public void ThenTheUserShouldBeNavigatedToTheFormPage()
+        {
+            Assert.True(formPage.IsDisplayed("FormInputField"), "The user is not on the Form Page");
         }
 
         [Then(@"the user should be navigated to Error page (.*)")]
