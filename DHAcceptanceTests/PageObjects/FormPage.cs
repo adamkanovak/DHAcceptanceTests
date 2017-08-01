@@ -39,7 +39,7 @@ namespace DHAcceptanceTests.PageObjects
             wait.Until(driver => FormSubmitButton.Displayed);
             FormSubmitButton.Click();
             return this;
-        } 
+        }
 
         public bool IsDisplayed(string WebElementName)
         {
