@@ -6,7 +6,7 @@ using System;
 
 namespace DHAcceptanceTests.PageObjects
 {
-    public class Footer
+    class Footer
     {
         private readonly IWebDriver _driver;
         private WebDriverWait wait;

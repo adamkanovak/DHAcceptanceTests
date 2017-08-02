@@ -64,6 +64,27 @@ namespace DHAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-04 When I click on the Home button, it should turn to active status")]
+        [NUnit.Framework.CategoryAttribute("P3")]
+        public virtual void REQ_UI_04WhenIClickOnTheHomeButtonItShouldTurnToActiveStatus()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-04 When I click on the Home button, it should turn to active status", new string[] {
+                        "P3"});
+#line 4
+this.ScenarioSetup(scenarioInfo);
+#line 5
+ testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ testRunner.When("the user clicks the Home button in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 7
+ testRunner.Then("the Home button should be active in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 8
+  testRunner.And("the Form button should not be active in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("REQ-UI-09 The following text should be visible on the Home page in <h1> tag \"Welc" +
             "ome to the Docler Holding QA Department\"")]
         [NUnit.Framework.CategoryAttribute("P3")]
@@ -72,13 +93,13 @@ namespace DHAcceptanceTests.Features
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-09 The following text should be visible on the Home page in <h1> tag \"Welc" +
                     "ome to the Docler Holding QA Department\"", new string[] {
                         "P3"});
-#line 4
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 5
+#line 12
  testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
+#line 13
  testRunner.When("the user is on the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 7
+#line 14
  testRunner.Then("the \"Welcome to the Docler Holding QA Department\" text should be displayed in h1 " +
                     "tag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -94,13 +115,13 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-10 The following text should be visible on the Home page in <p> \"This site" +
                     " is dedicated to perform some exercises and demonstrate automated web testing\"", new string[] {
                         "P3"});
-#line 10
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 11
+#line 18
  testRunner.Given("the user is navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
+#line 19
  testRunner.When("the user is on the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 20
  testRunner.Then("the \"This site is dedicated to perform some exercises and demonstrate automated w" +
                     "eb testing.\" text should be displayed in p tag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

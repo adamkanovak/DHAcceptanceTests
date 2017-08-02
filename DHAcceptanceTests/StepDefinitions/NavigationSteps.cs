@@ -82,5 +82,33 @@ namespace DHAcceptanceTests.StepDefinitions
         {
             Assert.True(footer.IsDisplayed("CompanyLogo"), "The company logo is not displayed");
         }
+
+        [Then(@"the (.*) button should be active in the header")]
+        public void ThenTheFormButtonShouldBeActiveInTheHeader(string buttonName)
+        {
+            switch (buttonName.ToLower())
+            {
+                case "home":
+                    Assert.True(header.IsDisplayed("ActiveHomeButton"), buttonName + " button is not displyed");
+                    break;
+                case "form":
+                    Assert.True(header.IsDisplayed("ActiveFormButton"), buttonName + " button is not displyed");
+                    break;
+            }
+        }
+
+        [Then(@"the (.*) button should not be active in the header")]
+        public void ThenTheHomeButtonShouldNotBeActiveInTheHeader(string buttonName)
+        {
+            switch (buttonName.ToLower())
+            {
+                case "home":
+                    Assert.False(header.IsDisplayed("ActiveHomeButton"), buttonName + " button is active in the header");
+                    break;
+                case "form":
+                    Assert.False(header.IsDisplayed("ActiveFormButton"), buttonName + " button is active in the header");
+                    break;
+            }
+        }
     }
 }
