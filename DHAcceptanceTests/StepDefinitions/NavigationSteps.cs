@@ -32,6 +32,7 @@ namespace DHAcceptanceTests.StepDefinitions
             Assert.True(header.IsDisplayed("HomeButton"), "The application is not loaded");
         }
 
+        [When(@"the user is on the ([^ ]*) page")]
         [When(@"the user clicks the ([^ ]*) button in the header")]
         public void WhenTheUserClicksOneButtonInTheHeader(string buttonName)
         {
@@ -55,7 +56,7 @@ namespace DHAcceptanceTests.StepDefinitions
         [Then(@"the user should be navigated to the Home page")]
         public void ThenTheUserShouldBeNavigatedToTheHomePage()
         {
-            Assert.True(homePage.IsDisplayed("WelcomeText"), "The user is not on the Home Page");
+            Assert.True(homePage.isDisplayed("h1Text"), "The user is not on the Home Page");
         }
 
         [Then(@"the user should be navigated to the Form page")]

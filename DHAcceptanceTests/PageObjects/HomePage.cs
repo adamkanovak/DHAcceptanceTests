@@ -8,8 +8,11 @@ namespace DHAcceptanceTests.PageObjects
     {
         private readonly IWebDriver _driver;
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div/div[1]/h1")]
-        private IWebElement WelcomeText { get; set; }
+        [FindsBy(How = How.CssSelector, Using = "div[class=ui-test]>h1")]
+        private IWebElement h1Text { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "div[class=ui-test]>p")]
+        private IWebElement pText { get; set; }
 
         public HomePage(IWebDriver driver)
         {
@@ -17,14 +20,28 @@ namespace DHAcceptanceTests.PageObjects
             PageFactory.InitElements(_driver, this);
         }
 
-        public bool IsDisplayed(string WebElementName)
+        public bool isDisplayed(string WebElementName)
         {
             switch (WebElementName)
             {
-                case "WelcomeText":
-                    return WelcomeText.IsDisplayed();
+                case "h1Text":
+                    return h1Text.IsDisplayed();
+                case "pText":
+                    return pText.IsDisplayed();
             }
             return false;
+        }
+
+        public string getTextOfElement(string WebElementName)
+        {
+            switch (WebElementName)
+            {
+                case "h1Text":
+                    return h1Text.Text;
+                case "pText":
+                    return pText.Text;
+            }
+            return null;
         }
     }
 }
