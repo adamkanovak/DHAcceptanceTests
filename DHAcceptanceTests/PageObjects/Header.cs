@@ -6,7 +6,7 @@ using System;
 
 namespace DHAcceptanceTests.PageObjects
 {
-    public class Header
+    class Header
     {
         private readonly IWebDriver _driver;
         private WebDriverWait wait;
@@ -17,8 +17,14 @@ namespace DHAcceptanceTests.PageObjects
         [FindsBy(How = How.Id, Using = "home")]
         private IWebElement HomeButton { get; set; }
 
+        [FindsBy(How = How.CssSelector, Using = "li[class='active']>a[id='home']")]
+        private IWebElement ActiveHomeButton { get; set; }
+
         [FindsBy(How = How.Id, Using = "form")]
         private IWebElement FormButton { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "li[class='active']>a[id='form']")]
+        private IWebElement ActiveFormButton { get; set; }
 
         [FindsBy(How = How.Id, Using = "error")]
         private IWebElement ErrorButton { get; set; }
@@ -68,8 +74,12 @@ namespace DHAcceptanceTests.PageObjects
                     return UITestingButton.IsDisplayed();
                 case "HomeButton":
                     return HomeButton.IsDisplayed();
+                case "ActiveHomeButton":
+                    return ActiveHomeButton.IsDisplayed();
                 case "FormButton":
                     return FormButton.IsDisplayed();
+                case "ActiveFormButton":
+                    return ActiveFormButton.IsDisplayed();
                 case "ErrorButton":
                     return ErrorButton.IsDisplayed();
             }

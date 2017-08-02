@@ -34,7 +34,7 @@ namespace DHAcceptanceTests.StepDefinitions
         [Then(@"the user should be redirected to the Hello page")]
         public void ThenTheUserShouldBeRedirectedToTheHelloPage()
         {
-            Assert.IsTrue(submittedFormPage.IsDisplayed("HelloText"));
+            Assert.IsTrue(submittedFormPage.IsDisplayed("HelloText"), "The user is not redirected to the HelloPage");
         }
 
         [Then(@"the (.*) text should be displayed")]
@@ -46,13 +46,13 @@ namespace DHAcceptanceTests.StepDefinitions
         [Then(@"one input box should be visible")]
         public void ThenOneInputBoxShouldBeVisible()
         {
-            Assert.IsTrue(formPage.IsDisplayed("FormInputField"));
+            Assert.IsTrue(formPage.IsDisplayed("FormInputField"), "The form page's input box is not displayed");
         }
 
         [Then(@"one submit button should be visible")]
         public void ThenOneSubmitButtonShouldBeVisible()
         {
-            Assert.IsTrue(formPage.IsDisplayed("FormSubmitButton"));
+            Assert.IsTrue(formPage.IsDisplayed("FormSubmitButton"), "The form page's Go! button is not displayed");
         }
     }
 }

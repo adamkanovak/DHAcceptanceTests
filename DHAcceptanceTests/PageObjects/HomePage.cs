@@ -4,7 +4,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace DHAcceptanceTests.PageObjects
 {
-    public class HomePage
+    class HomePage
     {
         private readonly IWebDriver _driver;
 

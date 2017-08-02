@@ -6,7 +6,7 @@ using System;
 
 namespace DHAcceptanceTests.PageObjects
 {
-    public class SubmittedFormPage
+    class SubmittedFormPage
     {
         private readonly IWebDriver _driver;
         private WebDriverWait wait;

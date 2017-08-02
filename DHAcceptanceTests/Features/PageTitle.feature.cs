@@ -64,13 +64,13 @@ namespace DHAcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("REQ-UI-01 REQ-UI-02 The Title should be \"UI Testing Site\" on every site")]
+        [NUnit.Framework.DescriptionAttribute("REQ-UI-01 The Title should be \"UI Testing Site\" on every site")]
         [NUnit.Framework.CategoryAttribute("P2")]
         [NUnit.Framework.CategoryAttribute("failing")]
         [NUnit.Framework.TestCaseAttribute("Home", null)]
         [NUnit.Framework.TestCaseAttribute("Form", null)]
         [NUnit.Framework.TestCaseAttribute("Error", null)]
-        public virtual void REQ_UI_01REQ_UI_02TheTitleShouldBeUITestingSiteOnEverySite(string header, string[] exampleTags)
+        public virtual void REQ_UI_01TheTitleShouldBeUITestingSiteOnEverySite(string header, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "P2",
@@ -79,7 +79,7 @@ namespace DHAcceptanceTests.Features
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-01 REQ-UI-02 The Title should be \"UI Testing Site\" on every site", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("REQ-UI-01 The Title should be \"UI Testing Site\" on every site", @__tags);
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5

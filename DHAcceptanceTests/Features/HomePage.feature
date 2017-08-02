@@ -1,6 +1,13 @@
 ﻿Feature: HomePage related UI element checks
 
 @P3
+Scenario: REQ-UI-04 When I click on the Home button, it should turn to active status
+	Given the user is navigated to the site
+	When the user clicks the Home button in the header
+	Then the Home button should be active in the header
+		And the Form button should not be active in the header 
+
+@P3
 Scenario: REQ-UI-09 The following text should be visible on the Home page in <h1> tag "Welcome to the Docler Holding QA Department"
 	Given the user is navigated to the site
 	When the user is on the Home page
